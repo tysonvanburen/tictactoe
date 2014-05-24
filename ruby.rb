@@ -1,67 +1,59 @@
-tic_tac_toe = [["","",""],
-              ["","",""],
-              ["","",""]
-            ]
+puts "Welcom to Tic Tac Toe!"
+
+tic_tac_toe = [
+   ["","",""],
+   ["","",""],
+   ["","",""]
+]
 
 turn = 1
 
 while turn <= 9
-  if turn.odd?
-    puts "Choose a number 1-9"
-    choice = gets.to_i
-    if choice == 1
-      tic_tac_toe[0][0] = "X"
-    elsif choice == 2
-      tic_tac_toe[0][1] = "X"
-    elsif choice == 3
-      tic_tac_toe[0][2] = "X"
-    elsif choice == 4
-      tic_tac_toe[1][0] = "X"
-    elsif choice == 5
-      tic_tac_toe[1][1] = "X"
-    elsif choice == 6
-      tic_tac_toe[1][2] = "X"
-    elsif choice == 7
-      tic_tac_toe[2][0] = "X"
-    elsif choice == 8
-      tic_tac_toe[2][1] = "X"
-    elsif choice == 9
-      tic_tac_toe[2][2] = "X"
+
+
+    if turn.odd?
+      player = "X"
+      puts "Player 1's turn!"
+    else
+      player = "O"
+      puts "Player 2's turn!"
     end
 
-    # X player just played
-    # figure out if X won
-    # if X won, exit game
-  end
+
+        puts "Choose a row! (0-3)"
+        row = gets.chomp
+        puts "Choose a column! (0-3)"
+        column = gets.chomp
 
 
-  if turn.even?
-    puts "Choose a number 1-9"
-    choice = gets.to_i
-    if choice ==1
-      tic_tac_toe[0][0] = "O"
-    elsif choice == 2
-      tic_tac_toe[0][1] = "O"
-    elsif choice == 3
-      tic_tac_toe[0][2] = "O"
-    elsif choice == 4
-      tic_tac_toe[1][0] = "O"
-    elsif choice == 5
-      tic_tac_toe[1][1] = "O"
-    elsif choice == 6
-      tic_tac_toe[1][2] = "O"
-    elsif choice == 7
-      tic_tac_toe[2][0] = "O"
-    elsif choice == 8
-      tic_tac_toe[2][1] = "O"
-    elsif choice == 9
-      tic_tac_toe[2][2] = "O"
-    end
+turn += 1
 
-    # O player just played
-    # figure out if O just won
-    # if O won exit game
-  end
+              if row == [0,0] && row == [0,1] && row == [0,2]
+                puts "WINNER WINNER CHICKEN DINNER"
+                break
+              elsif row == [1,0] && row == [1,1] && row == [1,2]
+                puts "WINNER WINNER CHICKEN DINNER"
+                break
+              elsif row == [2,0] && row == [2,1] && row == [2,2]
+                puts "WINNER WINNER CHICKEN DINNER"
+                break
+              end
 
-  turn += 1
+                  if column == [0,0] && column == [1,0] && column == [2,0]
+                    puts "WINNER WINNER CHICKEN DINNER"
+                    break
+                  elsif column == [0,1] && column == [1,1] && column == [2,1]
+                    puts "WINNER WINNER CHICKEN DINNER"
+                    break
+                  elsif column == [0,2] && column == [1,2] && column == [2,2]
+                    puts "WINNER WINNER CHICKEN DINNER"
+                    break
+                  end
+
+
+
+
+
+
+
 end
