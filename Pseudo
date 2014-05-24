@@ -1,0 +1,13 @@
+Make a Board-----
+Loop that ends after 9 turns------
+Determine whose turn it is------
+- Player 1 - X-----
+- Player 2 - O-----
+Player chooses a space
+- Get player input
+- Check to see if a space is occupied
+- If not, put the players symbol in that space
+Define all 8 winning combinations ---------
+Check to see if anyone has won
+
+After 9 turns, if no one has won, it's a tie
