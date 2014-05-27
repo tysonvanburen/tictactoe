@@ -45,6 +45,7 @@ if tic_tac_toe[row][column].empty?
     puts "#{player} wins!"
     break
   end
+  if "X" 
 
 end
 end
